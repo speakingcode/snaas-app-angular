@@ -1,0 +1,16 @@
+    <h3>{{album.album.name}}</h3>
+    <div><img ng-src="{{album.album.img_url}}" class="thumbnail"></div>
+    <div>Released: {{album.album.release_date}}</div>
+    <div>Play length: {{album.album.length}}</div>
+    <div>Label: {{album.album.label}}</div>
+    <div>
+      <button
+        type="button"
+        class="btn btn-default btn-lg"
+        ng-click="album.addFavorite()">
+        <span
+          class="glyphicon glyphicon-heart"
+          aria-hidden="true"></span>
+        {{album.isFavorite ? 'Remove Favorite' : 'Add Favorite'}}
+      </button>
+    </div>

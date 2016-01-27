@@ -3,8 +3,16 @@
   <div>
     <navbar></navbar>
   </div>
+  <div class="row">
+    <div class="col-sm-2">
+    <ul class="nav nav-pills nav-stacked">
+      <li ng-repeat="album in albums.albums">
+        <a ui-sref="albums.detail({id: album.id})">{{album.name}}</a>
+      </li>
+    </ul>
+    </div>
 
-  <div ng-repeat="album in albums.albums">
-    {{album.name}}
-  </div>
+    <div class="col-sm-8">
+      <ui-view></ui-view>
+    </div>
 </div>

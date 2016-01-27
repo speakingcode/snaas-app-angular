@@ -20,8 +20,15 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController() {
+    function NavbarController($scope, favoriteAlbumsSvc) {
+      var vm = this;
+      
+      vm.count = favoriteAlbumsSvc.getFavoriteCount();
 
+      $scope.$watch(
+          function() { return favoriteAlbumsSvc.getFavoriteCount(); },
+          function(newCount) { vm.count = newCount; }
+      );
     }
   }
 

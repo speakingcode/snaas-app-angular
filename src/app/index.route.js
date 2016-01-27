@@ -23,10 +23,10 @@
     })
 
     .state('albums.detail', {
-      url: '/albums/:id',
-      templateUrl: 'app/albums/albumDetail.html',
+      url: '/:id',
+      templateUrl: 'app/albums/album.detail.html',
       controller: 'AlbumDetailController',
-      controllerAs: 'albumDetail'
+      controllerAs: 'album'
     })
     
     ;
